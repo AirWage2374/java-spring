@@ -13,17 +13,17 @@ import jakarta.persistence.Table;
 @Table(name = "training")
 
 public class Training implements Serializable{
-    private static final long serialVersionUID = 1L;
+    private static final Long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private Date created_date;
     private Date deleted_date;
     private Date updated_date;
     private String nama_penagajar;
     private String tema;
-    public Training(long id, Date created_date, Date deleted_date, Date updated_date, String nama_penagajar,
+    public Training(Long id, Date created_date, Date deleted_date, Date updated_date, String nama_penagajar,
             String tema) {
         this.id = id;
         this.created_date = created_date;
@@ -32,13 +32,13 @@ public class Training implements Serializable{
         this.nama_penagajar = nama_penagajar;
         this.tema = tema;
     }
-    public static long getSerialversionuid() {
+    public static Long getSerialversionuid() {
         return serialVersionUID;
     }
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public Date getCreated_date() {

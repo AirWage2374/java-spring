@@ -24,7 +24,7 @@ public class KaryawanService {
         }
     }
 
-    public Karyawan getKaryawanById(long id) {
+    public Karyawan getKaryawanById(Long id) {
         return karyawanRepo.findById(id).orElse(null);
     }
 }

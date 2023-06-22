@@ -13,11 +13,11 @@ import jakarta.persistence.Table;
 @Table(name = "karyawan")
 
 public class Karyawan implements Serializable{
-    private static final long serialVersionUID = 1L;
+    private static final Long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private Date created_date;
     private Date deleted_date;
     private Date updated_date;
@@ -26,7 +26,7 @@ public class Karyawan implements Serializable{
     private String jk;
     private String nama;
     private String status;
-    public Karyawan(long id, Date created_date, Date deleted_date, Date updated_date, String alamat, Date dob, String jk,
+    public Karyawan(Long id, Date created_date, Date deleted_date, Date updated_date, String alamat, Date dob, String jk,
             String nama, String status) {
         this.id = id;
         this.created_date = created_date;
@@ -38,13 +38,13 @@ public class Karyawan implements Serializable{
         this.nama = nama;
         this.status = status;
     }
-    public static long getSerialversionuid() {
+    public static Long getSerialversionuid() {
         return serialVersionUID;
     }
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public Date getCreated_date() {
